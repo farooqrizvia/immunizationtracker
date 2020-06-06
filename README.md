@@ -1,62 +1,89 @@
-# [Start Bootstrap - SB Admin](https://startbootstrap.com/templates/sb-admin/)
+# Immunization Tracker
 
-[SB Admin](http://startbootstrap.com/templates/sb-admin/) is an open source, admin dashboard template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://code-and-response.github.io/Project-Sample/)
 
-## Preview
+Platform to provide information whether a person is immunized or not.
 
-[![SB Admin Preview](https://startbootstrap.com/assets/img/screenshots/templates/sb-admin.png)](https://blackrockdigital.github.io/startbootstrap-sb-admin/)
+## Contents
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-sb-admin/)**
+1. [Short description](#short-description)
+1. [Demo video](#demo-video)
+1. [The architecture](#the-architecture)
+1. [Long description](#long-description)
+1. [Project roadmap](#project-roadmap)
+1. [Getting started](#getting-started)
+1. [Running the tests](#running-the-tests)
+1. [Live demo](#live-demo)
+1. [Built with](#built-with)
+1. [Contributing](#contributing)
+1. [Versioning](#versioning)
+1. [Authors](#authors)
+1. [License](#license)
+1. [Acknowledgments](#acknowledgments)
 
-## Status
+## Short description
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-sb-admin/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-sb-admin.svg)](https://www.npmjs.com/package/startbootstrap-sb-admin)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-sb-admin.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-sb-admin)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin?type=dev)
+Platform to provide information whether a person is immunized or not.
 
-## Download and Installation
+### What's the problem?
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/templates/sb-admin/)
-* Install via npm: `npm i startbootstrap-sb-admin`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-sb-admin.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-sb-admin)
+With the COVID19 becoming a pandemic , it is important to track status of the immunizations of every individual across the world. This information is important to be tracked and maintained for people and agencies to track travel, health and other related sectors. 
 
-## Usage
+### How can technology help?
 
-### Basic Usage
+The application provides a common platform for authorized healthcare providers and common man to be able to self register and provide the flexibility to track their immunization status. Technology enables easy access and maintainability of this information on a very large scale. 
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-### Advanced Usage
+## Demo video
 
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `scripts/` directory to see which tasks are included with the dev environment.
+[![Watch the video](https://github.com/farooqrizvia/immunizationtracker/blob/master/WhatsApp%20Image%202020-06-06%20at%205.05.46%20PM.jpeg)](https://youtu.be/OJrgpbCC78Q)
 
-## Bugs and Issues
+## The architecture
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-sb-admin/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/templates/sb-admin/).
+![Video transcription/translation app](https://github.com/farooqrizvia/immunizationtracker/blob/master/architecture.png)
 
-## Custom Builds
+1. The user navigates to the site and registers himself and add dependes if any.
+2. .
+3. .
+4. .
 
-You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
+## Long description
 
-## About
+[More detail is available here](DESCRIPTION.md)
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+## Project roadmap
 
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
+![Roadmap](https://github.com/farooqrizvia/immunizationtracker/blob/master/roadmap.PNG)
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+## Getting started
 
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+### Prerequisites
 
-## Copyright and License
+What things you need to install the software and how to install them
 
-Copyright 2013-2020 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/gh-pages/LICENSE) license.
+```bash
+install nodeJs
+```
+
+## Live demo
+
+You can find a running system to test at [immunizationtracker](https://vworrior-immunitytracker-v1.herokuapp.com/)
+
+## Built with
+
+* [NodeJS] - Programming language
+* [IBM Cloud Functions] - Backend API runtime envrionment
+* [MongoDB] - No Sql database
+* [Jade/Pug Templates] - The web framework used
+* [Heroku] - Frontend Runtime
+
+
+
+## Authors
+
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/Code-and-Response/Project-Sample/graphs/contributors) who participated in this project.
+
