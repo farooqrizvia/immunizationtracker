@@ -10215,6 +10215,34 @@ body {
 
 
 
+
+.form-control1 {
+  padding: 0 15px!important;
+  height: 52px;
+  border-radius: 0;
+  line-height: 50px;
+}
+
+/* Modal  */
+/* .modal-backdrop.show {
+  opacity: 0 !important;
+} */
+
+.clearfix{
+  clear: both !important;
+}
+
+.edit-user-details{
+  position: relative;
+  float: right;
+}
+
+.welcome-user{
+  color:white;
+}
+
+
+
 .input-group1{
   width: 100%;
   position: relative;
@@ -10254,14 +10282,32 @@ body {
   color: #000!important;
   min-width: 100px!important;
 }
-.form-control1 {
-  padding: 0 15px!important;
+
+.input-group-btn.icon {
+  width: 10%;
   height: 52px;
-  border-radius: 0;
-  line-height: 50px;
+  float: left;
+  color: #fff;
+  background: #049bff;
+  cursor: pointer;
+}
+.input-group-btn.icon .mm {
+  font-size: 30px;
+  text-align: center;
+  line-height: 51px;
+  margin: 0 auto;
+  display: block;
+  font-weight: 700;
 }
 
-/* Modal  */
-/* .modal-backdrop.show {
-  opacity: 0 !important;
-} */
+
+.search-input-field{
+  margin:0 auto;
+}
+.modal-body,.scroll-content{
+  height:350px;
+  overflow-y: scroll;
+}
+#exampleFormControlSelect1{
+  height: 50px !important;  
+}

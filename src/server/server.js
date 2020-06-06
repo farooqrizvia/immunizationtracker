@@ -21,9 +21,13 @@ app.get('/', (req, res) => {
   res.render('login', {error:false});
 });
 
+app.get('/login', (req, res) => {
+  res.render('login', {error:false});
+});
+
 
 app.get('/register', (req, res) => {
-  res.render('register');
+  res.sendFile(htmlDirPath + '/user-registration.html');
 });
 
 app.post('/index', (req, res) => {
@@ -43,7 +47,7 @@ app.post('/index', (req, res) => {
 });
 
 app.get('/password', (req, res) => {
-  res.sendFile(viewsPath + '/password.html');
+  res.sendFile(htmlDirPath + '/password.html');
 });
 
 app.get('/user-dashboard', (req, res) => {
