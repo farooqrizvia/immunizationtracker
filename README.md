@@ -42,14 +42,21 @@ The application provides a common platform for authorized healthcare providers a
 
 ![Video transcription/translation app](https://github.com/farooqrizvia/immunizationtracker/blob/master/architecture.png)
 
-1. The user navigates to the site and registers himself and add dependes if any.
-2. .
-3. .
-4. .
+End User
+1. Self register to the application
+2. Add dependants who do not have an Aadhar ID for themselves
+3. Search for health care centers locality wise to register for immunization
+4. View dashboard containing profile details and immunization details for self and dependants
+
+Health Care providers
+1. Invite other Authorized members for registration
+2. View end user details based on Aadhar 
+3. Update immunization status of primary and secondary end users. 
+4. View immunization history
 
 ## Long description
 
-[More detail is available here](DESCRIPTION.md)
+[More detail is available here](https://github.com/farooqrizvia/immunizationtracker/blob/master/Description.md)
 
 ## Project roadmap
 
@@ -83,7 +90,8 @@ You can find a running system to test at [immunizationtracker](https://vworrior-
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/Code-and-Response/Project-Sample/graphs/contributors) who participated in this project.
-
+* **Farooq Rizvia** - *Initial work* - [Farooq Rizvia](https://github.com/farooqrizvia)
+* **Swetha Suryanarayanan** - *Initial work* - [Farooq Rizvia](https://github.com/farooqrizvia)
+* **Tejaswini Muniraj** - *Initial work* - [Farooq Rizvia](https://github.com/farooqrizvia)
+* **Aroona Prusti Anand** - *Initial work* - [Farooq Rizvia](https://github.com/farooqrizvia)
+* **Diksha Bhalla** - *Initial work* - [Farooq Rizvia](https://github.com/farooqrizvia)
