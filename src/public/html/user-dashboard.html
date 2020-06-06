@@ -9,7 +9,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Static Navigation - SB Admin</title>
+    <title>Immunization Tracker</title>
     <link href="../css/styles.css" rel="stylesheet" />
     <!-- <link
     href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
@@ -32,7 +32,7 @@
    
       </form>
       <!-- Navbar-->
-      <span class="welcome-user">Welcome User!</span>
+      <span class="welcome-user">Welcome Teja Muni!</span>
       <ul class="navbar-nav ml-auto ml-md-0">
         <li class="nav-item dropdown">
           <a
@@ -64,12 +64,6 @@
         <main>
           <div class="container-fluid">
             <h1 class="mt-4">User Dashboard</h1>
-            <!-- <ol class="breadcrumb mb-4">
-              <li class="breadcrumb-item">
-                <a href="index.html">Dashboard</a>
-              </li>
-              <li class="breadcrumb-item active">Static Navigation</li>
-            </ol> -->
             <div class="card mb-4">
               <div class="card-body">
                 <ul class="nav nav-tabs" role="tablist">
@@ -91,15 +85,6 @@
                       >Search Healthcare Centers</a
                     >
                   </li>
-                  <!-- <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="#references"
-                      role="tab"
-                      data-toggle="tab"
-                      >View Immunity Certificates</a
-                    >
-                  </li> -->
                 </ul>
 
                 <div class="tab-content">
@@ -109,7 +94,7 @@
                         <div class="card-header">
                           <i class="fas fa-table mr-1"></i>My Details
                           <span class="pull-right edit-user-details"
-                            ><button class="btn btn-primary mr-2" data-toggle="modal" data-target="#editDependantDetailsModal">
+                            ><button class="btn btn-primary mr-2" data-toggle="modal" data-target="#addDependantDetailsModal">
                               Add Dependants
                             </button></span
                           >
@@ -138,8 +123,8 @@
                                 <tr>
                                   <td>Teju Muni</td>
                                   <td>Female</td>
-                                  <td>1982/08/17</td>
-                                  <td>8661-2312-4221-1223</td>
+                                  <td>1982-08-17</td>
+                                  <td>8661 2312 4221</td>
                                   <td>Yes</td>
                                   <td>No</td>
                                   <td>
@@ -161,6 +146,7 @@
                                       />
                                     </svg>
                                 </a>
+                                <a href="#" data-toggle="modal" data-target="#viewUserDetailsModal">
                                     <svg
                                       class="bi bi-eye"
                                       width="1em"
@@ -178,6 +164,7 @@
                                         d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
                                       />
                                     </svg>
+                                  </a>
                                   </td>
                                 </tr>
                               </tbody>
@@ -204,8 +191,7 @@
                                     <tr>
                                       <th>Name</th>
                                       <th>Gender</th>
-                                      <th>DOB</th>
-                                      <th>Age</th>
+                                      <th>Date of birth</th>
                                       <th>Vaccinated</th>
                                       <th>Action</th>
                                     </tr>
@@ -213,10 +199,9 @@
     
                                   <tbody>
                                     <tr>
-                                      <td>Teju Muni</td>
+                                      <td>Swetha Surya</td>
                                       <td>Female</td>
-                                      <td>1982/08/17</td>
-                                      <td>37</td>
+                                      <td>2004-01-02</td>
                                       <td>No</td>
                                       <td>
                                             <a href="#" data-toggle="modal" data-target="#editDependantDetailsModal">
@@ -237,6 +222,7 @@
                                           />
                                         </svg>
                                         </a>
+                                        <a href="#" data-toggle="modal" data-target="#viewDependantDetailsModal">
                                         <svg
                                           class="bi bi-eye"
                                           width="1em"
@@ -254,6 +240,7 @@
                                             d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
                                           />
                                         </svg>
+                                      </a>
                                       </td>
                                     </tr>
                                   </tbody>
@@ -267,8 +254,6 @@
                   </div>
                   <div role="tabpanel" class="tab-pane" id="buzz">
                         <div class="tabContentbody card row ml-0">
-                            <!-- Navbar Search-->
-      
                             <div class=" col-md-offset-2 col-md-10 input-group mt-5 mb-5 justify-content-center align-items-center search-input-field">
                                 <input class="search-input form-control bg-white pdng" type="text"
                                  placeholder="State">
@@ -282,9 +267,6 @@
                                 <button class="btn btn-secondary" type="button" onclick="showHealthCenter()">Search</button>
                             </div>
                         </div>
-    
-
-    <!-- Navbar-->
                         <div class="card mb-4 m-3" id="welcomeDiv" style="display: none;">
                                 <div class="card-header">
                                   <i class="fas fa-table mr-1"></i>Healthcare Centers
@@ -330,9 +312,6 @@
                               </div>
                               </div>
                   </div>
-                  <!-- <div role="tabpanel" class="tab-pane" id="references">
-                    ccc
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -354,9 +333,11 @@
             </div>
           </div>
         </footer>
+      </div>
+    </div>
 
 
- <!-- Modal -->
+ <!-- Edit User Details Modal -->
  <div
  class="modal fade"
  id="editUserDetailsModal"
@@ -391,6 +372,7 @@
                       id="inputFirstName"
                       type="text"
                       placeholder="Enter first name"
+                      value="Teja"
                     />
                   </div>
                 </div>
@@ -403,6 +385,7 @@
                       id="inputLastName"
                       type="text"
                       placeholder="Enter last name"
+                      value="Muni"
                     />
                   </div>
                 </div>
@@ -417,6 +400,7 @@
                   type="email"
                   aria-describedby="emailHelp"
                   placeholder="Enter email address"
+                  value="tj.muni@gmail.com"
                 />
               </div>
          
@@ -431,6 +415,7 @@
                       id="inputFirstName"
                       type="text"
                       placeholder="Enter first name"
+                      value="8661 2312 4221"
                     />
                   </div>
                 </div>
@@ -443,6 +428,7 @@
                       id="inputLastName"
                       type="text"
                       placeholder="Enter last name"
+                      value="Bangalore"
                     />
                   </div>
                 </div>
@@ -455,6 +441,7 @@
                       id="inputLastName"
                       type="text"
                       placeholder="Enter last name"
+                      value="Karnataka"
                     />
                   </div>
                 </div>
@@ -473,7 +460,7 @@
                       id="exampleFormControlSelect1"
                     >
                       <option>Pancard</option>
-                      <option>Voter ID</option>
+                      <option selected>Voter ID</option>
                       <option>Driving License</option>
                     </select>
                   </div>
@@ -487,7 +474,8 @@
                       class="form-control py-4"
                       id="inputLastName"
                       type="text"
-                      placeholder="Enter last name"
+                      placeholder="Enter ID"
+                      value="VKH1236254"
                     />
                   </div>
                 </div>
@@ -503,6 +491,7 @@
                       id="inputFirstName"
                       type="date"
                       placeholder="Enter first name"
+                      value="1982-08-17"
                     />
                   </div>
                 </div>
@@ -515,6 +504,7 @@
                       id="inputLastName"
                       type="text"
                       placeholder="Enter last name"
+                      value="9876543210"
                     />
                   </div>
                 </div>
@@ -538,6 +528,7 @@
                     type="radio"
                     name="gender"
                     value="option2"
+                    checked
                   />
                   <span class="small mb-1 form-check-label">
                     Female</span
@@ -550,7 +541,7 @@
                 <a
                   class="btn btn-primary btn-block"
                   href="user-dashboard.html"
-                  >Update Account</a
+                  >Save Changes</a
                 >
               </div>
             </form>
@@ -569,19 +560,19 @@
 <!-- Modal -->
 
 
- <!-- Modal -->
+ <!-- Add Dependant Details Modal -->
  <div
  class="modal fade"
- id="editDependantDetailsModal"
+ id="addDependantDetailsModal"
  tabindex="-1"
  role="dialog"
- aria-labelledby="editDependantDetailsModalLabel"
+ aria-labelledby="addDependantDetailsModalLabel"
  aria-hidden="true"
 >
  <div class="modal-dialog" role="document">
-   <div class="modal-content">
+   <div class="modal-content" style="width:133% !important;">
      <div class="modal-header">
-       <h5 class="modal-title" id="editDependantDetailsModalLabel">Add/Edit Dependant Details</h5>
+       <h5 class="modal-title" id="addDependantDetailsModalLabel">Add Dependant Details</h5>
        <button
          type="button"
          class="close"
@@ -597,51 +588,119 @@
                     <div class="">
                     
                     <article class="card-body">
-                    <form>
+                      <form>
                         <div class="form-row">
-                            <div class="col form-group">
-                                <label>First name </label>   
-                                  <input type="text" class="form-control" placeholder="">
-                            </div> <!-- form-group end.// -->
-                            <div class="col form-group">
-                                    <label>Middle name </label>   
-                                      <input type="text" class="form-control" placeholder="">
-                                </div> <!-- form-group end.// -->
-                            <div class="col form-group">
-                                <label>Last name</label>
-                                  <input type="text" class="form-control" placeholder=" ">
-                            </div> <!-- form-group end.// -->
-                        </div> <!-- form-row end.// -->
-                       
-                        <div class="form-group">
-                                <label class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="gender" value="option1">
-                              <span class="form-check-label"> Male </span>
-                            </label>
-                            <label class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="gender" value="option2">
-                              <span class="form-check-label"> Female</span>
-                            </label>
-                        </div> <!-- form-group end.// -->
-                        <div class="form-group">
-                                <label>DOB </label>   
-                                  <input type="date" class="form-control" placeholder="DOB">
-                            </div>
+                          <div class="col-md-6">
                             <div class="form-group">
-                                    <label>Age </label>   
-                                      <input type="number" class="form-control" placeholder="">
-                                </div>
+                              <label class="small mb-1" for="inputFirstName"
+                                >First Name</label
+                              ><input
+                                class="form-control py-4"
+                                id="inputFirstName"
+                                type="text"
+                                placeholder="Enter first name"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="small mb-1" for="inputLastName"
+                                >Last Name</label
+                              ><input
+                                class="form-control py-4"
+                                id="inputLastName"
+                                type="text"
+                                placeholder="Enter last name"
+                              />
+                            </div>
+                          </div>
+                        </div>
+          
                   
-                       
-                         
-                    </form>
-                    <div
-                          class="form-group d-flex align-items-center justify-content-between mt-4 mb-0"
-                        >
-                         <a class="btn btn-primary" href="user-dashboard"
-                            >Save</a
+                        <div class="form-row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label
+                                class="small mb-1"
+                                for="exampleFormControlSelect1"
+                                >National ID</label
+                              >
+                              <select
+                                class="form-control"
+                                id="exampleFormControlSelect1"
+                              >
+                                <option>Pancard</option>
+                                <option>Voter ID</option>
+                                <option>Driving License</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="small mb-1" for="inputLastName"
+                                >&nbsp;</label
+                              >
+                              <input
+                                class="form-control py-4"
+                                id="inputLastName"
+                                type="text"
+                                placeholder="Enter ID"
+                              />
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="form-row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="small mb-1" for="inputFirstName"
+                                >Date of Birth</label
+                              ><input
+                                class="form-control py-4"
+                                id="inputFirstName"
+                                type="date"
+                                placeholder="Enter first name"
+                              />
+                            </div>
+                          </div>
+                   
+                        </div>
+                        <div class="form-group">
+                          <label class="small mb-1">Gender :</label>
+                          <label class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="gender"
+                              value="option1"
+                            />
+                            <span class="small mb-1 form-check-label">
+                              Male
+                            </span>
+                          </label>
+                          <label class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="gender"
+                              value="option2"
+                            />
+                            <span class="small mb-1 form-check-label">
+                              Female</span
+                            >
+                          </label>
+                        </div>
+          
+                        <div class="form-group mb-0" style="width: 150px;
+                        margin: 0 auto;float:right;">
+                          <a
+                            class="btn btn-primary btn-block"
+                            href="user-dashboard"
+                            >Add</a
                           >
                         </div>
+                      </form>
+                   
                     </article> 
                    
                     </div> 
@@ -659,6 +718,583 @@
       </div>
       
 </div>
+<!--  Modal --> 
+
+ <!-- Edit Dependant Details Modal -->
+ <div
+ class="modal fade"
+ id="editDependantDetailsModal"
+ tabindex="-1"
+ role="dialog"
+ aria-labelledby="editDependantDetailsModalLabel"
+ aria-hidden="true"
+>
+ <div class="modal-dialog" role="document">
+   <div class="modal-content" style="width:133% !important;">
+     <div class="modal-header">
+       <h5 class="modal-title" id="editDependantDetailsModalLabel">Edit Dependant Details</h5>
+       <button
+         type="button"
+         class="close"
+         data-dismiss="modal"
+         aria-label="Close"
+       >
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+            <div class="row justify-content-center">
+                    <div class="col-md-12">
+                    <div class="">
+                    
+                    <article class="card-body">
+                      <form>
+                        <div class="form-row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="small mb-1" for="inputFirstName"
+                                >First Name</label
+                              ><input
+                                class="form-control py-4"
+                                id="inputFirstName"
+                                type="text"
+                                placeholder="Enter first name"
+                                value="Swetha"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="small mb-1" for="inputLastName"
+                                >Last Name</label
+                              ><input
+                                class="form-control py-4"
+                                id="inputLastName"
+                                type="text"
+                                placeholder="Enter last name"
+                                value="Surya"
+                              />
+                            </div>
+                          </div>
+                        </div>
+          
+                  
+                        <div class="form-row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label
+                                class="small mb-1"
+                                for="exampleFormControlSelect1"
+                                >National ID</label
+                              >
+                              <select
+                                class="form-control"
+                                id="exampleFormControlSelect1"
+                              >
+                                <option>Pancard</option>
+                                <option selected>Voter ID</option>
+                                <option>Driving License</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="small mb-1" for="inputLastName"
+                                >&nbsp;</label
+                              >
+                              <input
+                                class="form-control py-4"
+                                id="inputLastName"
+                                type="text"
+                                placeholder="Enter ID"
+                                value="WKM1882114"
+                              />
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="form-row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="small mb-1" for="inputFirstName"
+                                >Date of Birth</label
+                              ><input
+                                class="form-control py-4"
+                                id="inputFirstName"
+                                type="date"
+                                placeholder="Enter first name"
+                                value="2004-01-02"
+                              />
+                            </div>
+                          </div>
+                   
+                        </div>
+                        <div class="form-group">
+                          <label class="small mb-1">Gender :</label>
+                          <label class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="gender"
+                              value="option1"
+                            />
+                            <span class="small mb-1 form-check-label">
+                              Male
+                            </span>
+                          </label>
+                          <label class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="gender"
+                              value="option2"
+                              checked
+                            />
+                            <span class="small mb-1 form-check-label">
+                              Female</span
+                            >
+                          </label>
+                        </div>
+          
+                        <div class="form-group mb-0" style="width: 150px;
+                        margin: 0 auto;float:right;">
+                          <a
+                            class="btn btn-primary btn-block"
+                            href="user-dashboard"
+                            >Save Changes</a
+                          >
+                        </div>
+                      </form>
+                   
+                    </article> 
+                   
+                    </div> 
+                    </div> 
+                    
+                    </div>
+
+ </div>
+</div>
+      </div>
+      
+</div>
+<!--  Modal --> 
+
+
+
+ <!-- View User Details Modal -->
+ <div
+ class="modal fade"
+ id="viewUserDetailsModal"
+ tabindex="-1"
+ role="dialog"
+ aria-labelledby="viewUserDetailsModalLabel"
+ aria-hidden="true"
+>
+ <div class="modal-dialog" role="document">
+   <div class="modal-content" style="width:133% !important;">
+     <div class="modal-header">
+       <h5 class="modal-title" id="viewUserDetailsModalLabel">View My Details</h5>
+       <button
+         type="button"
+         class="close"
+         data-dismiss="modal"
+         aria-label="Close"
+       >
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+        <div class="card-body">
+            <form>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="small mb-1" for="inputFirstName"
+                      >First Name</label
+                    ><input
+                      class="form-control py-4"
+                      id="inputFirstName"
+                      type="text"
+                      placeholder="Enter first name"
+                      value="Teja"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="small mb-1" for="inputLastName"
+                      >Last Name</label
+                    ><input
+                      class="form-control py-4"
+                      id="inputLastName"
+                      type="text"
+                      placeholder="Enter last name"
+                      value="Muni"
+                      disabled
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="small mb-1" for="inputEmailAddress"
+                  >Email</label
+                ><input
+                  class="form-control py-4"
+                  id="inputEmailAddress"
+                  type="email"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email address"
+                  value="tj.muni@gmail.com"
+                  disabled
+                />
+              </div>
+         
+
+              <div class="form-row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label class="small mb-1" for="inputFirstName"
+                      >Aadhar ID</label
+                    ><input
+                      class="form-control py-4"
+                      id="inputFirstName"
+                      type="text"
+                      placeholder="Enter first name"
+                      value="8661-2312-4221"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="small mb-1" for="inputLastName"
+                      >Aadhar Issued City</label
+                    ><input
+                      class="form-control py-4"
+                      id="inputLastName"
+                      type="text"
+                      placeholder="Enter last name"
+                      value="Bangalore"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="small mb-1" for="inputLastName"
+                      >Aadhar Issued State</label
+                    ><input
+                      class="form-control py-4"
+                      id="inputLastName"
+                      type="text"
+                      placeholder="Enter last name"
+                      value="Karnataka"
+                      disabled
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label
+                      class="small mb-1"
+                      for="exampleFormControlSelect1"
+                      >National ID</label
+                    >
+                    <select
+                      class="form-control"
+                      id="exampleFormControlSelect1"
+                      disabled
+                    >
+                      <option>Pancard</option>
+                      <option selected>Voter ID</option>
+                      <option>Driving License</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="small mb-1" for="inputLastName"
+                      >&nbsp;</label
+                    >
+                    <input
+                      class="form-control py-4"
+                      id="inputLastName"
+                      type="text"
+                      placeholder="Enter ID"
+                      value="VKH1236254"
+                      disabled
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="small mb-1" for="inputFirstName"
+                      >Date of Birth</label
+                    ><input
+                      class="form-control py-4"
+                      id="inputFirstName"
+                      type="date"
+                      placeholder="Enter first name"
+                      value="1982-08-17"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="small mb-1" for="inputLastName"
+                      >Phone No.</label
+                    ><input
+                      class="form-control py-4"
+                      id="inputLastName"
+                      type="text"
+                      placeholder="Enter last name"
+                      value="9876543210"
+                      disabled
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="small mb-1">Gender :</label>
+                <label class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    value="option1"                    
+                    disabled
+                  />
+                  <span class="small mb-1 form-check-label">
+                    Male
+                  </span>
+                </label>
+                <label class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    value="option2"
+                    checked
+                  />
+                  <span class="small mb-1 form-check-label">
+                    Female</span
+                  >
+                </label>
+              </div>
+            
+            </form>
+            <div class="form-group">
+              <label class="small mb-1">Primary :</label>
+              <label class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  value="option1"                    
+                  checked
+                />
+                <span class="small mb-1 form-check-label">
+                  Yes
+                </span>
+              </label>
+              <label class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  value="option2"
+                  disabled
+                />
+                <span class="small mb-1 form-check-label">
+                  No</span
+                >
+              </label>
+            </div>
+          
+          </div>
+
+ </div>
+</div>
+<!-- Modal -->
+
+
+
+
+      </div>
+      
+</div>
+<!-- Modal -->
+
+
+ <!-- View Dependant Details Modal -->
+ <div
+ class="modal fade"
+ id="viewDependantDetailsModal"
+ tabindex="-1"
+ role="dialog"
+ aria-labelledby="viewDependantDetailsModalLabel"
+ aria-hidden="true"
+>
+ <div class="modal-dialog" role="document">
+   <div class="modal-content" style="width:133% !important;">
+     <div class="modal-header">
+       <h5 class="modal-title" id="viewDependantDetailsModalLabel">View Dependant Details</h5>
+       <button
+         type="button"
+         class="close"
+         data-dismiss="modal"
+         aria-label="Close"
+       >
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+            <div class="row justify-content-center">
+                    <div class="col-md-12">
+                    <div class="">
+                    
+                    <article class="card-body">
+                      <form>
+                        <div class="form-row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="small mb-1" for="inputFirstName"
+                                >First Name</label
+                              ><input
+                                class="form-control py-4"
+                                id="inputFirstName"
+                                type="text"
+                                placeholder="Enter first name"
+                                value="Swetha"
+                                disabled
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="small mb-1" for="inputLastName"
+                                >Last Name</label
+                              ><input
+                                class="form-control py-4"
+                                id="inputLastName"
+                                type="text"
+                                placeholder="Enter last name"
+                                value="Surya"
+                                disabled
+                              />
+                            </div>
+                          </div>
+                        </div>
+          
+                  
+                        <div class="form-row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label
+                                class="small mb-1"
+                                for="exampleFormControlSelect1"
+                                >National ID</label
+                              >
+                              <select
+                                class="form-control"
+                                id="exampleFormControlSelect1"
+                                disabled
+                              >
+                                <option>Pancard</option>
+                                <option selected>Voter ID</option>
+                                <option>Driving License</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="small mb-1" for="inputLastName"
+                                >&nbsp;</label
+                              >
+                              <input
+                                class="form-control py-4"
+                                id="inputLastName"
+                                type="text"
+                                placeholder="Enter ID"
+                                value="WKM1882114"
+                                disabled
+                              />
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="form-row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="small mb-1" for="inputFirstName"
+                                >Date of Birth</label
+                              ><input
+                                class="form-control py-4"
+                                id="inputFirstName"
+                                type="date"
+                                placeholder="Enter first name"
+                                value="2004-01-02"
+                                disabled
+                              />
+                            </div>
+                          </div>
+                   
+                        </div>
+                        <div class="form-group">
+                          <label class="small mb-1">Gender :</label>
+                          <label class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="gender"
+                              value="option1"
+                              disabled
+                            />
+                            <span class="small mb-1 form-check-label">
+                              Male
+                            </span>
+                          </label>
+                          <label class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="gender"
+                              value="option2"
+                              checked
+                            />
+                            <span class="small mb-1 form-check-label">
+                              Female</span
+                            >
+                          </label>
+                        </div>
+          
+                       
+                      </form>
+                   
+                    </article> 
+                   
+                    </div> 
+                    </div> 
+                    
+            </div>
+
+      </div>
+    </div>
+  </div>      
+</div>
+<!--  Modal --> 
+
+
 
 
    
@@ -681,14 +1317,6 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <script
-    src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"
-    crossorigin="anonymous"
-  ></script> -->
   <script src="assets/demo/datatables-demo.js"></script>
     <script src="js/scripts.js"></script>
   </body>
