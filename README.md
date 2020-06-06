@@ -91,7 +91,7 @@ You can find a running system to test at [immunizationtracker](https://vworrior-
 ## Authors
 
 * **Farooq Rizvia** - *Initial work* - [Farooq Rizvia](https://github.com/farooqrizvia)
-* **Swetha Suryanarayanan** - *Initial work* - [Farooq Rizvia](https://github.com/farooqrizvia)
-* **Tejaswini Muniraj** - *Initial work* - [Farooq Rizvia](https://github.com/farooqrizvia)
-* **Aroona Prusti Anand** - *Initial work* - [Farooq Rizvia](https://github.com/farooqrizvia)
-* **Diksha Bhalla** - *Initial work* - [Farooq Rizvia](https://github.com/farooqrizvia)
+* **Swetha Suryanarayanan** - *Initial work* - 
+* **Tejaswini Muniraj** - *Initial work* - 
+* **Aroona Prusti Anand** - *Initial work* - 
+* **Diksha Bhalla** - *Initial work* - 
