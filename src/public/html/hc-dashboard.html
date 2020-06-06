@@ -150,10 +150,10 @@
                                               <td>1982-08-17</td>
                                               <td>8661 2312 4221</td>
                                               <td>Yes</td>
-                                              <td>No</td>
+                                              <td class="alert" role="alert" id="result">Not vaccinated</td>
                                               <td><input type="date" /></td>       
                                               
-                                           <td><button class="btn btn-primary">Vacinate</button></td>
+                                           <td><button class="btn btn-primary" id="btn-confirm">Vaccinate</button></td>
                                             </tr>
                                             <tr>
                                                 <td>2</td>
@@ -164,9 +164,9 @@
                                                
                                                 <td>No</td>
                                                 
-                                                <td>No</td>
+                                                <td class="alert" role="alert" id="result">Not Vaccinated</td>
                                                 <td><input type="date" /></td>
-                                                <td><button class="btn btn-primary">Vacinate</button></td>
+                                                <td><button class="btn btn-primary" id="btn-confirm-two">Vaccinate</button></td>
 
                                               </tr>
                                           </tbody>
@@ -322,123 +322,30 @@
                       </div>
                     </div>
 
-<!-- Modal -->
-<div
-class="modal fade"
-id="editUserInfoDetailsModal"
-tabindex="-1"
-role="dialog"
-aria-labelledby="editUserInfoDetailsModalLabel"
-aria-hidden="true"
->
-<div class="modal-dialog" role="document">
-  <div class="modal-content" style="width:133% !important;">
-    <div class="modal-header">
-      <h5 class="modal-title" id="editUserInfoDetailsModalLabel">Edit My Details</h5>
-      <button
-        type="button"
-        class="close"
-        data-dismiss="modal"
-        aria-label="Close"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-       <div class="card-body">
-           <form>
-             <div class="form-row">
-               <div class="col-md-6">
-                 <div class="form-group">
-                   <label class="small mb-1" for="inputFirstName"
-                     >Name</label
-                   ><p>Tejaswini Muniraj</p>
-                 </div>
-               </div>
-             </div>
-
-        
-
-             <div class="form-row">
-               <div class="col-md-5">
-                 <div class="form-group">
-                   <label class="small mb-1" for="inputFirstName"
-                     >Aadhar ID</label
-                   ><p>8661 2312 4221</p>
-                 </div>
-               </div>
-              
-               
-             </div>
-
-        
-
-             <div class="form-row">
-               <div class="col-md-6">
-                 <div class="form-group">
-                   <label class="small mb-1" for="inputFirstName"
-                     >Date of Birth</label
-                   ><p>1975/01/09</p>
-                 </div>
-               </div>
-               <div class="col-md-6">
-                 <div class="form-group">
-                   <label class="small mb-1" for="inputLastName"
-                     >Primary</label
-                   ><p>Yes</p>
-                 </div>
-               </div>
-             </div>
-             <div class="form-group">
-               <label class="small mb-1">Gender :</label>
-               <label class="form-check form-check-inline">
-                 <input
-                   class="form-check-input"
-                   type="radio"
-                   name="gender"
-                   value="option1"
-                   disabled
-                 />
-                 <span class="small mb-1 form-check-label">
-                   Male
-                 </span>
-               </label>
-               <label class="form-check form-check-inline">
-                 <input
-                   class="form-check-input"
-                   type="radio"
-                   name="gender"
-                   value="option2"
-                   checked
-                 />
-                 <span class="small mb-1 form-check-label">
-                   Female</span
-                 >
-               </label>
-             </div>
-
-             <div class="form-group mt-4 mb-0" style="width: 150px;
-             margin: 0 auto;float:right;">
-               <a
-                 class="btn btn-primary btn-block"
-                 href="user-dashboard.html"
-                 >Update Account</a
-               >
-             </div>
-           </form>
-         </div>
-
-</div>
-</div>
-<!-- Modal -->
-
-
-
+<!-- Vaccinate User Modal -->
+          <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mi-modal">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="editUserDetailsModalLabel">Vaccinate User</h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span> 
+                      </button>
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="modal-btn-si">Yes</button>
+                    <button type="button" class="btn btn-secondary" id="modal-btn-no">No</button>
                   </div>
-
-
-          
-          </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- <div class="alert" role="alert" id="result"></div> -->
         </main>
         <footer class="py-4 bg-light mt-auto">
           <div class="container-fluid">
@@ -477,6 +384,37 @@ function showDiv2() {
         var column = "table ." + $(this).attr("name");
         $(column).toggle();
     });
+
+//vaccinate user 
+var modalConfirm = function(callback){
+  
+  $("#btn-confirm").on("click", function(){
+    $("#mi-modal").modal('show');
+  });
+
+  $("#modal-btn-si").on("click", function(){
+    callback(true);
+    $("#mi-modal").modal('hide');
+  });
+  
+  $("#modal-btn-no").on("click", function(){
+    callback(false);
+    $("#mi-modal").modal('hide');
+  });
+};
+
+modalConfirm(function(confirm){
+  if(confirm){
+    //Acciones si el usuario confirma
+    $("#result").html("Vaccinated");
+    $("#result").addClass("green");
+  }else{
+    //Acciones si el usuario no confirma
+    $("#result").html("Not Vaccinated");
+    $("#result").addClass("red");
+  }
+});
+
 
     //add table row on checkbox checked
 

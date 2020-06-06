@@ -10311,3 +10311,12 @@ body {
 #exampleFormControlSelect1{
   height: 50px !important;  
 }
+
+.green{
+  color:green;
+  font-weight: bold;
+}
+.red{
+  color:red;
+  font-weight: bold;
+}
