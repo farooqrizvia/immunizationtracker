@@ -46,6 +46,10 @@ app.get('/password', (req, res) => {
   res.sendFile(viewsPath + '/password.html');
 });
 
+app.get('/user-dashboard', (req, res) => {
+  res.sendFile(htmlDirPath + '/user-dashboard.html');
+});
+
 
 app.listen(3000, () => {
   console.log('Listening on port 3000...');
