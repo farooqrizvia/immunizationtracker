@@ -1,0 +1,38 @@
+extends ../layouts/authentication.pug
+
+block content
+    .container
+        .row.justify-content-center
+            .col-lg-5
+                .card.shadow-lg.border-0.rounded-lg.mt-5
+                    .card-header
+                        h3.text-center.font-weight-light.my-4 Login
+                        script(src='js/login.js')
+                    .card-body
+                        form(class="form-signin" method="POST" action="/index")
+                            if error
+                              label.small.mb-1(style="color: red") Invalid credentials, please retry!!
+                            .form-group
+                                label.small.mb-1(for='inputEmailAddress') Email
+                                input#inputEmailAddress.form-control.py-4(type='email', placeholder='Enter email address' name = 'inputEmailAddress' )
+                            .form-group
+                                label.small.mb-1(for='inputPassword') Password
+                                input#inputPassword.form-control.py-4(type='password', placeholder='Enter password' name = 'inputPassword')
+                                div.span#role
+                                    label.small.mb-2 Role : 
+                                    br
+                                    label.small.ml-1(for='hcUser') HealthCare User
+                                    input#hcuser.ml-2(type='radio', name='userRole', value='hc' )
+                                    label.small.ml-3(for='endUser') User
+                                    input#endUser.ml-2(type='radio', name='userRole', value='user' checked)
+                            .form-group
+                                .custom-control.custom-checkbox
+                                    input#rememberPasswordCheck.custom-control-input(type='checkbox')
+                                    label.custom-control-label(for='rememberPasswordCheck') Remember password
+                            .form-group.d-flex.align-items-center.justify-content-between.mt-4.mb-0
+                                a.small(href='password') Forgot Password?
+                                button.btn.btn-primary(type="submit") Login
+                    .card-footer.text-center
+                        .small
+                            a(href='register') Need an account? Sign up!
+                    
