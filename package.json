@@ -3,15 +3,8 @@
     "name": "startbootstrap-sb-admin",
     "version": "6.0.0",
     "scripts": {
-        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
-        "build:assets": "node scripts/build-assets.js",
-        "build:pug": "node scripts/build-pug.js",
-        "build:scripts": "node scripts/build-scripts.js",
-        "build:scss": "node scripts/build-scss.js",
-        "clean": "node scripts/clean.js",
         "start": "node src/server/server.js",
-        "dev": "nodemon src/server/server.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+        "dev": "nodemon src/server/server.js"
     },
     "description": "A free admin dashboard template based on Bootstrap 4, created by Start Bootstrap.",
     "keywords": [
@@ -43,7 +36,6 @@
         "body-parser": "^1.19.0",
         "bootstrap": "4.4.1",
         "express": "^4.17.1",
-        "nodemon": "^2.0.4",
         "path": "^0.12.7",
         "request": "^2.88.2"
     },
@@ -56,6 +48,7 @@
         "prettier": "1.19.1",
         "pug": "2.0.4",
         "sass": "1.25.0",
+        "nodemon": "^2.0.4",
         "shelljs": "0.8.3"
     }
 }
