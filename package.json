@@ -9,7 +9,8 @@
         "build:scripts": "node scripts/build-scripts.js",
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
-        "start": "npm run build && node scripts/start.js",
+        "start": "node src/server/server.js",
+        "dev": "nodemon src/server/server.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
     "description": "A free admin dashboard template based on Bootstrap 4, created by Start Bootstrap.",
@@ -43,7 +44,8 @@
         "bootstrap": "4.4.1",
         "express": "^4.17.1",
         "nodemon": "^2.0.4",
-        "path": "^0.12.7"
+        "path": "^0.12.7",
+        "request": "^2.88.2"
     },
     "devDependencies": {
         "autoprefixer": "9.7.4",
